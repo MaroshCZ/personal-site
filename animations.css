@@ -1,0 +1,101 @@
+
+.bottom-cloud {
+  position: fixed;
+  left: 300px;
+  bottom: 400px;
+  animation-name: cloud-bottom1, cloud-bottom2, cloud-top3;
+  animation-duration: 12s, 7s, 2s;
+  animation-delay: 12s, 12s, 4s;
+  animation-iteration-count: infinite, infinite, 1;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out, linear;
+  animation-fill-mode: none, none, backwards;
+}
+.top-cloud {
+  position: fixed;
+  right: 450px;
+  top: 20px;
+  animation-name: cloud-top1, cloud-top2, cloud-top3;
+  animation-duration: 10s, 12s, 3s;
+  animation-delay: 10s, 10s, 6s;
+  animation-iteration-count: infinite, infinite, 1;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out, linear, linear;
+  animation-fill-mode: none, none, backwards;
+
+
+}
+.top-cloud:hover {
+animation-play-state: paused, running;
+}
+.bottom-cloud:hover {
+animation-play-state: paused, running;
+}
+h1 {
+  animation-name: h1;
+  animation-duration: 4s;
+  animation-iteration-count: 1;
+  animation-delay: 1.5s;
+  animation-fill-mode: backwards;
+}
+.top-container {
+  animation-name: top-container;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  animation-delay: 3s;
+  animation-fill-mode: backwards;
+  animation-direction: alternate;
+}
+.top-container h2 {
+  animation-name: h2;
+  animation-duration: 4s;
+  animation-iteration-count: 1;
+  animation-delay: 3s;
+  animation-fill-mode: backwards;
+}
+.profile-picture {
+  border-style: solid;
+  border-width: 5px;
+  border-radius: 160px;
+  border-color: white;
+}
+.profile-picture:hover {
+  transition: border-color 4s;
+  border-color: #000839;
+}
+.profile-picture:hover:after {
+  transition: border-color 4s;
+  border-color: white;
+}
+@keyframes cloud-top1 {
+  from {right: 450px;}
+  to {right: 0px;}
+}
+@keyframes cloud-top2 {
+  from {top: 20px;}
+  to {top: 50px;}
+}
+@keyframes cloud-top3 {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+@keyframes cloud-bottom1 {
+  from {left: 300px;}
+  to {left: 0px;}
+}
+@keyframes cloud-bottom2 {
+  from {bottom: 400px;}
+  to {bottom: 480px;}
+}
+@keyframes h1 {
+  from {opacity:0;}
+  to {opacity: 1;}
+}
+@keyframes h2 {
+  from {opacity:0;}
+  to {opacity: 1;}
+}
+@keyframes top-container {
+  from {background-color:#00a8cc;}
+  to {background-color: #005082;}
+}
